@@ -1,0 +1,21 @@
+<template>,
+    <lightning-card>
+      <lightning-button variant="brand" label="Check" title="Primary action" onclick={toggel} class="slds-m-left_x-small"></lightning-button>
+      <div if:true = {visible}>
+       <p>Arithmetic Operations</p>
+       The result of multiplication between {num1} * {num2} = {product}<br/>
+       The result of adding {num1} + {num2} = {addition}<br/>
+       The result of substracting {num1} - {num2} = {difference}<br/>
+       The result of divding {num1} / {num2} = {division}<br/>
+    </div>
+    <div title="Relation Operations" if:false = {visible}>   
+      <p>Relational Operations</p>
+      The comparison between {num1} > {num2} is {greaterThan}<br/>  
+      The comparison between {num1} >= {num2} is {greaterThanEq}<br/>  
+      The comparison between {num1} &lt; {num2} is {lesserThan}<br/>  
+      The comparison between {num1} &LessSlantEqual; {num2} is {lesserThanEq}<br/>
+      The comparison between {num1} == {num2} is {equalTo}<br/>  
+      The comparison between {num1} != {num2} is {notequalto}<br/>        
+      </div> 
+</lightning-card>
+</template>

@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 export default class HelloWebComponent extends LightningElement {
-	greeting = UserInfo.getUserId() ;
+	greeting = 'Trailblazer' ;
     currentDate = new Date().toDateString();
     
     get capitalizedGreeting() {
@@ -9,4 +9,4 @@ export default class HelloWebComponent extends LightningElement {
     handleGreetingChange(event) {
         this.greeting = event.target.value;
     }
-}S
+}

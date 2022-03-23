@@ -1,0 +1,16 @@
+<template>
+	<lightning-card title="Patient Details ">
+		<lightning-input label="Enter hospital name" type="Text" onkeyup={accepthname}>
+		</lightning-input>
+		<lightning-input label="Enter Patient number" type="Number" onkeyup={acceptNo}>
+		</lightning-input>
+		<lightning-input label="Enter Patient Name" type="text" onkeyup={acceptName}>
+		</lightning-input>
+		<lightning-input label="Enter Patient Age" type="Number" onkeyup={acceptAge}>
+		</lightning-input>
+		<br/> Hospoital Name : {hospital_name}
+		<br/> Your Number is  :  {patient.pt_no}
+		<br/> Your Name is  :  {patient.pt_name}
+		<br/> Your Age is : {patient.pt_age}
+	</lightning-card>
+</template>

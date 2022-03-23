@@ -1,0 +1,16 @@
+<template>,
+    <lightning-card title="Check Leap Year"  >
+        <lightning-input style=" width: 25%;" type="text" label= "Enter the number to verify" onchange = {checkNum} placeholder="Enter here" >
+        </lightning-input>
+        <lightning-button variant="brand" label="Check Leap Year" title="Primary action" onclick={toggle} class="slds-m-left_x-small" slot="actions"></lightning-button>
+        <lightning-button></lightning-button>
+        <div if:true={messageVisible}>
+            <div if:true={visible}>
+                Given year is a leap year
+            </div>
+            <div if:false={visible}>
+                Given year is a not leap year
+            </div>
+        </div>
+    </lightning-card>
+</template>

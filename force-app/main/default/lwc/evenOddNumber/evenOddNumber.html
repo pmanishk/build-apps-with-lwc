@@ -1,0 +1,15 @@
+<template>,
+    <lightning-card>
+        <lightning-input type="text" style=" width: 25%;"
+        placeholder="Enter the number here" onkeyup={toggle}>
+        </lightning-input>
+        <div if:true={messageVisible}>
+            <div if:true={visible}>
+                Given Number is an Even Number
+            </div>
+            <div if:false={visible}>
+                Given Number is a Odd Number
+            </div>
+        </div>
+    </lightning-card>
+</template>

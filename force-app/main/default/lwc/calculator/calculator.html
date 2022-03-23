@@ -1,0 +1,142 @@
+<template>
+    <lightning-card>
+        <div class="slds-align_absolute-center">
+            <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-cols slds-size_4-of-12">
+                    <lightning-input style="text-align-last: right;" placeholder="0" type="text" name="firstName"
+                        value={num}></lightning-input>
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-cols slds-size_8-of-12">
+                        <lightning-button variant="basic" label="9" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="8" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="7" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="brand" label="+" onclick={oprClick}>
+                        </lightning-button>
+                    </div>
+                    <div class="slds-cols slds-size_8-of-12">
+                        <lightning-button variant="basic" label="6" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="5" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="4" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="brand" label="-" onclick={oprClick}>
+                        </lightning-button>
+                    </div>
+                    <div class="slds-cols slds-size_8-of-12">
+                        <lightning-button variant="basic" label="3" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="2" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="1" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="brand" label="*" onclick={oprClick}>
+                        </lightning-button>
+                    </div>
+                    <div class="slds-cols slds-size_8-of-12">
+                        <lightning-button class="slds-col slds-button_stretch slds-size_2-of-12" variant="basic"
+                            label="." onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="basic" label="0" onclick={numClick}>
+                        </lightning-button>
+                        <lightning-button variant="brand" label="=" onclick={calc}>
+                        </lightning-button>
+                        <lightning-button variant="brand" label="/" onclick={oprClick}>
+                        </lightning-button>
+                    </div>
+                    <div class="slds-cols slds-size_8-of-12">
+                        <lightning-button class="slds-cols slds-size_1-of-3" variant="Brand" label="Clear"
+                            onclick={clr}>
+                        </lightning-button>
+                        <lightning-button class="slds-cols slds-size_2-of-3" variant="Brand" label="All Clear"
+                            onclick={allclr}>
+                        </lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <lightning-layout multiple-rows style="padding: 5px;" class="slds-align_absolute-center slds-size_8-of-12">
+            <lightning-layout-item class="slds-col slds-size_8-of-12">
+                <lightning-input style="text-align-last: right;" placeholder="0" type="text" name="firstName"
+                    value={num}></lightning-input>
+            </lightning-layout-item>
+            <div class="slds-grid">
+                <lightning-layout-item class="slds-col slds-size_8-of-12 ">
+                    <lightning-button class=" slds-col slds-size_2-of-12" variant="basic" label="9" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-12" variant="basic" label="8" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-12" variant="basic" label="7" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-12" variant="brand" label="+" onclick={oprClick}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </div>
+            <div class="slds-grid">
+                <lightning-layout-item class="slds-col slds-size_8-of-12 ">
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="basic" label="6" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-12" variant="basic" label="5" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-12" variant="basic" label="4" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-12" variant="brand" label="-" onclick={oprClick}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </div>
+            <div class="slds-grid">
+                <lightning-layout-item class="slds-col slds-size_8-of-8">
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="basic" label="3" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="basic" label="2" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="basic" label="1" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="brand" label="*" onclick={oprClick}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </div>
+            <div class="slds-grid">
+                <lightning-layout-item class="slds-col slds-size_8-of-8 ">
+                    <lightning-button class="slds-col slds-button_stretch slds-size_2-of-8" variant="basic" label="."
+                        onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="basic" label="0" onclick={numClick}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="brand" label="=" onclick={calc}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_2-of-8" variant="brand" label="/" onclick={oprClick}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </div>
+            <div class="slds-grid">
+                <lightning-layout-item class="slds-col slds-size_8-of-8">
+                    <lightning-button class="slds-col slds-size_3-of-8" variant="Brand" label="Clear" onclick={clr}>
+                    </lightning-button>
+                    <lightning-button class="slds-col slds-size_5-of-8" variant="Brand" label="All Clear"
+                        onclick={allclr}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </div>
+        </lightning-layout> 
+    -->
+
+        temp {temp} {operator} num {num} temp2 {temp2}
+
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <lightning-input type="text" value={num}></lightning-input>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </lightning-card>
+
+</template>
