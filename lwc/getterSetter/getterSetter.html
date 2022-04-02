@@ -1,0 +1,16 @@
+<template>,
+    <lightning-card title="Check Even or Odd Number">
+        <lightning-input type="text" style=" width: 25%;" label= "Enter the number to verify" onchange = {checkNum} placeholder="Enter here" >
+        </lightning-input>
+        <lightning-button variant="brand" label="Check" title="Primary action" onclick={toggle} class="slds-m-left_x-small" slot="actions"></lightning-button>
+        <lightning-button></lightning-button>
+        <div if:true={messageVisible}>
+            <div if:true={visible}>
+                Given Number is an Even Number
+            </div>
+            <div if:false={visible}>
+                Given Number is a Odd Number
+            </div>
+        </div>
+    </lightning-card>
+</template>

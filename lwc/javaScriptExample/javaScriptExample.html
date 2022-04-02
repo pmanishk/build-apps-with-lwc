@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Enter Book Details">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Book Name " placeholder="type here..." onkeyup={inputBookName}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Author Name" placeholder="type here..." onkeydown={inputAuthorName}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Book Cost" placeholder="type here..." onchange={inputCost}></lightning-input>
+        </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Book Edition" placeholder="type here..." onclick ={inputEdition}></lightning-input>
+        </div>
+    </lightning-card>
+    <lightning-card title="Display Book Details">
+        {greetings} <br/>
+        Book Name : {book.bookName}<br/>
+        Author Name : {book.authorName}<br/>
+        Book Cost :{book.cost}<br/>
+        Book Edition : {book.edition}
+    </lightning-card>
+</template>

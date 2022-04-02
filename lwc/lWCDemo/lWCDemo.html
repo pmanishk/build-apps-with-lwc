@@ -1,0 +1,72 @@
+<template>
+	<lightning-card>
+		<img class="slds-align_absolute-center" src="https://developer.salesforce.com/1/unknown/immutable/s/888f839/app/theme/dist/assets/images/salesforce-logo-corporate.svg" style="align-items: center;" height="20%" width="20%">
+		<p class="slds-text-heading_medium slds-align_absolute-center">Sign up for your Salesforce Developer Edition</p>
+		<p class="slds-align_absolute-center">A full-featured copy of the Platform, for free</p>
+		<lightning-layout multiple-rows class="slds-align_absolute-center center-align">
+			<lightning-layout-item size="6" class="slds-p-top_xxx-small" padding="around-small">
+				<lightning-input type="text" name="firstName" label="First Name" placeholder="Your first name" required
+					message-when-value-missing="Enter your First Name">
+				</lightning-input>
+			</lightning-layout-item>
+			<lightning-layout-item size="6" class="slds-p-top_xxx-small" padding="around-small">
+				<lightning-input type="text" name="lastName" label="Last Name" placeholder="Your last name" required
+					message-when-value-missing="Enter your Last Name">
+				</lightning-input>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small">
+				<lightning-input type="email" label="Email address" placeholder="Your email address" required
+					message-when-value-missing="Enter your email address">
+				</lightning-input>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small ">
+				<lightning-combobox name="role" label="Role" value={roleValue} placeholder="Your Job Role"
+					options={roleOptions} onchange={handleChange} required
+					message-when-value-missing="Select your job role"></lightning-combobox>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small ">
+				<lightning-input type="text" name="company" label="Company" placeholder="Company Name" required
+					message-when-value-missing="Enter your company name">
+				</lightning-input>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small ">
+				<lightning-combobox name="country" label="Country" value={countryValue} placeholder="Select Country"
+					options={countryOptions} required message-when-value-missing="Select your country">
+				</lightning-combobox>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small ">
+				<lightning-input type="text" variant="standard" name="pincode" label="Postal Code"
+					placeholder="Your Postal code" required maxlength="6"
+					message-when-value-missing="Enter your postal code"></lightning-input>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small ">
+				<lightning-input type="email" label="Username" placeholder="Ex. name@yourcompany.com" required
+					message-when-value-missing="Create a user name">
+				</lightning-input>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-around_small ">
+				By registering, you confirm you have read and agree to the
+				<lightning-formatted-url value="Terms of Use" tooltip="Terms of Use" target="_blank">
+				</lightning-formatted-url>
+				and the
+				<lightning-formatted-url value="Master Subscription Agreement " tooltip="Master Subscription Agreement "
+					target="_blank"></lightning-formatted-url> and to the storing and processing of your personal data
+				by Salesforce as described in the
+				<lightning-formatted-url value="Privacy Statement " tooltip="Privacy Statement " target="_blank">
+				</lightning-formatted-url>,
+				including use for marketing purposes.
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-button slds-button_brand">
+				<lightning-button variant="brand" label="Sign me Up" title="Sign me Up"></lightning-button>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="12" class="slds-align_absolute-center ">
+				Already have a Salesforce Developer Environment?
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-align_absolute-center slds-button_stretch">
+				<lightning-formatted-url value="Log in" label="Log in" tooltip="Log in" target="_blank" style="align-items: center;">
+				</lightning-formatted-url>,
+			</lightning-layout-item>
+		</lightning-layout>
+	</lightning-card>
+</template>
